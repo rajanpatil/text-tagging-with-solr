@@ -1,12 +1,17 @@
 # text-tagging-with-solr
 Exploring the finite state transducer (FST) to implement text tagging via solr
 
+## Pre-requisites:
+- Java 11
+
 ## Steps to follow
 
 ### Get Apache Solr
 Go to [Solr's download page](http://www.apache.org/dyn/closer.lua/lucene/solr/) and download either the
 ".zip" or the ".tgz" depending on which you prefer, then expand it.  We'll call the expanded directory
 SOLR_DIST_DIR. 
+
+**Note:** These steps have been validated with solr-7.7.3 version.
 
 ### Get the SolrTextTagger
 The OpenSextant SolrTextTagger is a plug-in to Apache Solr. To get the
@@ -35,7 +40,7 @@ Create a Solr collection named "AuthorNames" as follows:
 
     bin/solr create -c AuthorNames
 
-## Configure solr schema
+### Configure solr schema
 
 ````
 curl -X POST -H 'Content-type:application/json'  http://localhost:8983/solr/AuthorNames/schema -d '{
@@ -111,15 +116,14 @@ The response should be this (the QTime may vary):
     "QTime":1},
   "tagsCount":1,
   "tags":[[
-      "startOffset",6,
-      "endOffset",19,
-      "ids",["5128581"]]],
+      "startOffset",158,
+      "endOffset",178,
+      "ids",["1"]]],
   "response":{"numFound":1,"start":0,"docs":[
       {
-        "id":"5128581",
-        "name":["FirstName1 LastName1"]
-      }
-    ]
+        "id":"1",
+        "name":["firstName1 lastname1"]
+      }]
   }
 }
 ````
