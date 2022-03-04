@@ -18,6 +18,9 @@ central or build it yourself [SolrTextTagger](https://github.com/OpenSextant/Sol
 The easiest method is simply to put the '.jar' file into SOLR_DIST_DIR/server/solr/lib/.  The
 lib dir won't exist initially so create it.
 
+**Note:** In case you get log4j core dependency error following below steps, download and copy log4j-core.jar 
+into SOLR_DIST_DIR/server/lib/ext
+
 ### Start Solr instance
 Start Solr on port 8983 (Solr's default port):
 
@@ -81,7 +84,7 @@ curl -X POST -H 'Content-type:application/json' http://localhost:8983/solr/Autho
 
 ````
 curl -X POST --data-binary @/path/to/author_names.csv -H 'Content-type:application/csv' \
-  'http://localhost:8983/solr/AuthorNames/update?commit=true&optimize=true&separator=%09&encapsulator=%00&fieldnames=id,name'
+  'http://localhost:8983/solr/AuthorNames/update?commit=true&optimize=true&separator=%2C&encapsulator=%00&fieldnames=id,name'
 ````
 
 That might take around 35 seconds; it depends.  It can be a lot faster if the schema were tuned
