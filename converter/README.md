@@ -3,7 +3,7 @@
 The utility to convert parquet files to csv.
 
 ### Pre-requisite
-- Python 3.8.0
+- python 3.9.7
 - pipenv
 
 ### Install dependencies

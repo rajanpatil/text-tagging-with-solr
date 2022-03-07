@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pandas = "*"
-pyarrow = "*"
-fastparquet = "*"
+pandas = "==1.4.1"
+pyarrow = "==7.0.0"
+fastparquet = "==0.8.0"
 
 [dev-packages]
 
