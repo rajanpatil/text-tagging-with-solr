@@ -123,5 +123,10 @@ The response should be this (the QTime may vary):
 }
 ````
 
+### Cleanup
+The `cleanup.sh` deletes collection along with schema config and data.
+
+    cleanup.sh
+
 ## References
 - [Open sextant text tagger](https://github.com/OpenSextant/SolrTextTagger)
