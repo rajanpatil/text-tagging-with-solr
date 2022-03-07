@@ -7,8 +7,8 @@ if [[ $# == 1 ]]
 then
   num_records=$1
 fi
-rm -f $DATA_HOME/$csv_file_name
+rm -f "$DATA_HOME/$csv_file_name"
 for id in $(seq 1 "$num_records")
 do
-   echo "$id,firstname$id lastname$id" >> $DATA_HOME/$csv_file_name
+   echo "$id,firstname$id lastname$id" >> "$DATA_HOME/$csv_file_name"
 done
