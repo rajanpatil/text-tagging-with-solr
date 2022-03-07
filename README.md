@@ -17,7 +17,6 @@ also based on FST. Follow [solr-8 example](./Solr_8_11_1.md) for more details.
 - [Solr 8 text tagger](https://solr.apache.org/guide/8_11/the-tagger-handler.html)
 
 ### Utilities
-
 There are some utilities which are quite useful in generating more sample data or converting 
 existing parquet files to csv format.
 

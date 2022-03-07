@@ -7,7 +7,7 @@ OpenSextant SolrTextTagger library.
 
 ## Steps to follow
 
-### Get Apache Solr
+### Get apache solr 7.7.3
 Go to [Solr's download page](http://www.apache.org/dyn/closer.lua/lucene/solr/) and download Solr 7.7.3, either the
 ".zip" or the ".tgz" depending on which you prefer, then expand it.
 
@@ -24,12 +24,12 @@ lib dir won't exist initially so create it.
 **Note:** In case you get log4j core dependency error following below steps, download and copy log4j-core.jar 
 into SOLR_DIST_DIR/server/lib/ext
 
-### Start Solr instance
+### Start solr instance
 Start Solr on port 8983 (Solr's default port):
 
     bin/solr start
 
-### Create and Configure a Solr Collection
+### Create and configure a solr collection
 There are 2 ways we could go about this.  Solr's classic approach involves editing some
 config files (schema.xml, solrconfig.xml).The newer approach is to use Solr's API to modify the 
 configuration.  We'll choose the latter.
@@ -94,7 +94,7 @@ curl -X POST --data-binary @/path/to/data/author_names.csv -H 'Content-type:appl
 The time taken by the upload depends on the size of data.
 In that command we said optimize=true to put the index in a state that will make tagging faster.
 
-### Tag Time!
+### Tag time!
 This is a trivial example tagging a small piece of text.
 
 ````
